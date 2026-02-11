@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            line-height: 200px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        #keyDisplay {
+            font-size: 20px;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Event Listener Interactive Page</h1>
+
+    <div id="box">Hover Me</div>
+
+    <button id="clickBtn">Click Me</button>
+    <button id="removeBtn">Remove Click Event</button>
+
+    <p>Press any key on keyboard:</p>
+    <p id="keyDisplay"></p>
+
+<script>
+    // Mouse Hover Events
+    const box = document.getElementById("box");
+
+    function changeColor() {
+        box.style.backgroundColor = "orange";
+        box.innerText = "Mouse Over!";
+    }
+
+    function resetColor() {
+        box.style.backgroundColor = "lightblue";
+        box.innerText = "Hover Me";
+    }
+
+    box.addEventListener("mouseover", changeColor);
+    box.addEventListener("mouseout", resetColor);
+
+
+    // Button Click Event
+    const clickBtn = document.getElementById("clickBtn");
+
+    function showMessage() {
+        alert("Button Clicked!");
+    }
+
+    clickBtn.addEventListener("click", showMessage);
+
+
+    // Remove Event Listener
+    const removeBtn = document.getElementById("removeBtn");
+
+    removeBtn.addEventListener("click", function() {
+        clickBtn.removeEventListener("click", showMessage);
+        alert("Click Event Removed!");
+    });
+
+
+    // Keyboard Event
+    const keyDisplay = document.getElementById("keyDisplay");
+
+    document.addEventListener("keydown", function(event) {
+        keyDisplay.innerText = "You pressed: " + event.key;
+    });
+
+</script>
+
+</body>
+</html>

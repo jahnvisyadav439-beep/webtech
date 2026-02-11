@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+        }
+        #container {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #333;
+        }
+        .box {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript DOM Manipulation</h2>
+
+<button onclick="addElement()">Add Element</button>
+<button onclick="removeElement()">Remove Last Element</button>
+<button onclick="modifyElement()">Modify First Element</button>
+
+<div id="container"></div>
+
+<script>
+    let count = 1;
+
+    function addElement() {
+        const newDiv = document.createElement("div");
+        newDiv.className = "box";
+        newDiv.textContent = "Element " + count;
+        document.getElementById("container").appendChild(newDiv);
+        count++;
+    }
+
+    function removeElement() {
+        const container = document.getElementById("container");
+        if (container.lastChild) {
+            container.removeChild(container.lastChild);
+        } else {
+            alert("No elements to remove");
+        }
+    }
+
+    function modifyElement() {
+        const container = document.getElementById("container");
+        if (container.firstChild) {
+            container.firstChild.textContent = "Modified Element";
+            container.firstChild.style.backgroundColor = "lightgreen";
+        } else {
+            alert("No elements to modify");
+        }
+    }
+</script>
+
+</body>
+</html>

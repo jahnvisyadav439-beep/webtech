@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .box {
+            padding: 15px;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 10px;
+        }
+        button {
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="mainHeading">Welcome to DOM Demo</h1>
+
+    <div class="box">
+        <p id="textPara">This text will change.</p>
+        <button onclick="changeText()">Change Text (getElementById)</button>
+    </div>
+
+    <div class="box">
+        <p class="highlight">This color will change.</p>
+        <button onclick="changeColor()">Change Color (querySelector)</button>
+    </div>
+
+    <div class="box">
+        <div id="contentArea">Old Content</div>
+        <button onclick="updateContent()">Update Content (innerHTML)</button>
+    </div>
+
+<script>
+    // 1️⃣ Using getElementById()
+    function changeText() {
+        var paragraph = document.getElementById("textPara");
+        paragraph.innerHTML = "Text changed using getElementById!";
+    }
+
+    // 2️⃣ Using querySelector()
+    function changeColor() {
+        var element = document.querySelector(".highlight");
+        element.style.color = "red";
+        element.innerHTML = "Color changed using querySelector!";
+    }
+
+    // 3️⃣ Using innerHTML
+    function updateContent() {
+        var area = document.getElementById("contentArea");
+        area.innerHTML = "<h3>New Dynamic Content</h3><p>This content was inserted using innerHTML.</p>";
+    }
+</script>
+
+</body>
+</html>

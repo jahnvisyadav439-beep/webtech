@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Drawing</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            border: 2px solid black;
+            margin-top: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Drawing Shapes with Fill Colors</h2>
+
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Draw Rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 100);
+
+        // Draw Circle
+        ctx.beginPath();
+        ctx.arc(300, 100, 50, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+
+        // Draw Triangle
+        ctx.beginPath();
+        ctx.moveTo(150, 250);
+        ctx.lineTo(50, 350);
+        ctx.lineTo(250, 350);
+        ctx.closePath();
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+        // Draw Line
+        ctx.beginPath();
+        ctx.moveTo(300, 250);
+        ctx.lineTo(450, 350);
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 4;
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
