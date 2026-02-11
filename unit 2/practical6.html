@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inline / Internal / External CSS</title>
+  <!-- Internal CSS -->
+  <style>
+    body { font-family: Arial, sans-serif; padding:20px; }
+    .internal { background:#eef; padding:8px; border-radius:6px; margin:8px 0; }
+    .external { padding:8px; border-radius:6px; margin:8px 0; }
+    img{float:right;
+        margin-right: 30px;}
+  </style>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="pt6.css">
+</head>
+<body>
+  <h1>CSS: Inline, Internal & External</h1>
+<div style="background:#ffefef; padding:8px; border-radius:6px;">
+    <strong>Inline style:</strong> This box uses an inline <code>style="..."</code>.
+  </div>
+<div class="internal">
+    <strong>Internal style:</strong> This box uses styles from the internal &lt;style &gt; block.
+  </div>
+ <div class="external">
+    <div id="ninth"><p> web page </p></div>
+<div id="first"><B><u>WEBTECH </u></B></div>
+<div id="second"><p>Web technology is the collection of tools, protocols, and 
+    systems that enable the creation, delivery, and 
+    interaction with websites and web applications over the internet</p>
+   </div>
+<div id="third">Key Components of Web Technolog<img src="image.png" width="300"></div>
+<p>The key components of web technology include the client (web browser) and the server, communicating 
+  via HTTP (Hypertext Transfer Protocol) to exchange data identified by URLs (Uniform Resource Locators).
+   On the development side, the fundamental languages are HTML for structure, CSS for styling, and 
+   JavaScript for interactivity, often working together on both the front-end and back-end to build and 
+   deliver web content. </p>
+  </div>
+</body>
+</html>

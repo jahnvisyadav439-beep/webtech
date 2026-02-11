@@ -1,0 +1,28 @@
+body{
+    background-color: lightskyblue;
+}
+p{
+    background-color: aqua;}
+#second{
+    font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+}
+#third{
+    font-size: 28px;
+    font-style: oblique;
+
+}
+ #ninth {
+            background-color: aqua;
+            font-size: 28px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+#first{
+    font-size: 28px;
+    text-underline-position: auto;
+    font-style: oblique;
+}
+#third{ 
+    font-style: oblique;
+    
+}
