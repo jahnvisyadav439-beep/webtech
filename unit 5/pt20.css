@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background: #222;
+    color: white;
+    padding: 40px 0;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+.projects {
+    background: white;
+}
+
+.card {
+    background: #eaeaea;
+    margin: 15px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
