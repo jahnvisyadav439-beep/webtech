@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation Example</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        input {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 250px;
+        }
+        span {
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if (name.trim() === "") {
+                alert("Name cannot be empty!");
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter a valid email address!");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long!");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+        function checkName() {
+            let name = document.getElementById("name").value;
+            let nameMsg = document.getElementById("nameMsg");
+
+            if (name.length < 3) {
+                nameMsg.innerHTML = "Name must be at least 3 characters";
+                nameMsg.style.color = "red";
+            } else {
+                nameMsg.innerHTML = "Looks good!";
+                nameMsg.style.color = "green";
+            }
+        }
+
+        function checkPassword() {
+            let password = document.getElementById("password").value;
+            let passMsg = document.getElementById("passMsg");
+
+            if (password.length < 6) {
+                passMsg.innerHTML = "Weak password";
+                passMsg.style.color = "red";
+            } else {
+                passMsg.innerHTML = "Strong password";
+                passMsg.style.color = "green";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+        
+        <label>Name:</label>
+        <input type="text" id="name" oninput="checkName()">
+        <span id="nameMsg"></span>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+
+        <label>Password:</label>
+        <input type="password" id="password" oninput="checkPassword()">
+        <span id="passMsg"></span>
+
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

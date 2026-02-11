@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Conditionals and Loops Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h2 {
+            color: darkblue;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px gray;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Conditional Statements and Loops</h1>
+
+    <div class="box">
+        <h2>1. Conditional Statement (if...else)</h2>
+        <p id="ifDemo"></p>
+    </div>
+
+    <div class="box">
+        <h2>2. Switch Statement</h2>
+        <p id="switchDemo"></p>
+    </div>
+
+    <div class="box">
+        <h2>3. For Loop</h2>
+        <p id="forDemo"></p>
+    </div>
+
+    <div class="box">
+        <h2>4. While Loop</h2>
+        <p id="whileDemo"></p>
+    </div>
+
+    <div class="box">
+        <h2>5. Do...While Loop</h2>
+        <p id="doWhileDemo"></p>
+    </div>
+
+<script>
+    // 1️⃣ IF...ELSE Example
+    let age = 18;
+    let message;
+
+    if (age >= 18) {
+        message = "You are eligible to vote.";
+    } else {
+        message = "You are not eligible to vote.";
+    }
+
+    document.getElementById("ifDemo").innerHTML = message;
+
+    // 2️⃣ SWITCH Example
+    let day = 3;
+    let dayName;
+
+    switch(day) {
+        case 1:
+            dayName = "Monday";
+            break;
+        case 2:
+            dayName = "Tuesday";
+            break;
+        case 3:
+            dayName = "Wednesday";
+            break;
+        default:
+            dayName = "Invalid Day";
+    }
+
+    document.getElementById("switchDemo").innerHTML = "Today is " + dayName;
+
+    // 3️⃣ FOR LOOP Example
+    let forOutput = "";
+    for (let i = 1; i <= 5; i++) {
+        forOutput += i + " ";
+    }
+
+    document.getElementById("forDemo").innerHTML = "Numbers using for loop: " + forOutput;
+
+    // 4️⃣ WHILE LOOP Example
+    let j = 1;
+    let whileOutput = "";
+
+    while (j <= 5) {
+        whileOutput += j + " ";
+        j++;
+    }
+
+    document.getElementById("whileDemo").innerHTML = "Numbers using while loop: " + whileOutput;
+
+    // 5️⃣ DO...WHILE LOOP Example
+    let k = 1;
+    let doWhileOutput = "";
+
+    do {
+        doWhileOutput += k + " ";
+        k++;
+    } while (k <= 5);
+
+    document.getElementById("doWhileDemo").innerHTML = "Numbers using do...while loop: " + doWhileOutput;
+
+</script>
+
+</body>
+</html>
