@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Semantic Elements Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0 20px;
+      line-height: 1.6;
+      background-color: rgb(187, 241, 241);
+    }
+    nav {
+      background-color: #008cba;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    aside {
+      background-color: #f4f4f4;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #008cba;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>
+    <h1>Welcome to My Website</h1>
+  </header>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#articles">Articles</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+<main>
+  <article id="home">
+      <h2>Home</h2>
+      <section>
+        <h3>Introduction</h3>
+        <p>This is a sample page to demonstrate semantic HTML5 elements and their proper usage.</p>
+      </section>
+      <section>
+        <h3>News</h3>
+        <p>Stay tuned for the latest updates about web development and design.</p>
+      </section>
+    </article>
+    <article id="articles">
+      <h2>Articles</h2>
+      <section>
+        <h3>Understanding Semantic HTML</h3>
+        <p>Semantic elements help describe the meaning of the content inside them, improving accessibility and SEO.</p>
+      </section>
+      <section>
+        <h3>Responsive Design Tips</h3>
+        <p>Learn how to make your website look good on all devices using flexible layouts and media queries.</p>
+      </section>
+      <aside>
+        <h4>Related Resources</h4>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank">MDN: Article Element</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank">MDN: Section Element</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank">MDN: Nav Element</a></li>
+        </ul>
+      </aside>
+    </article>
+    <article id="about">
+      <h2>About</h2>
+      <section>
+        <h3>Our Mission</h3>
+        <p>We aim to provide clear and practical web development tutorials for learners at all levels.</p>
+      </section>
+      <section>
+        <h3>Team</h3>
+        <p>Our team consists of experienced web developers passionate about education and open web standards.</p>
+      </section>
+    </article>
+  </main>
+<footer>
+    <p>© 2025 My Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
